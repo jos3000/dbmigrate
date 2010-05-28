@@ -58,6 +58,14 @@ class DBMigrate {
 		$this->path_lock_file = $path_lock_file;
 	}
 	
+	public function setStartMode($start_mode){
+		$this->start_mode = $start_mode;
+	}
+	
+	public function setDoBackup($do_backup){
+		$this->do_backup = $do_backup;
+	}
+	
 	# ask the user to choose from a fixed set of options
 	
 	private function ask_fixed($correct_array){
