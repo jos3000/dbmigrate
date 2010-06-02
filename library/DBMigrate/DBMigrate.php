@@ -262,7 +262,7 @@ class DBMigrate {
 		
 		foreach($file_list As $f){
 			//Get ID from file name
-			$id = (int)substr(substr($f, strpos($f,"/")+1), 0, strpos(substr($f, strpos($f,"/")+1),"_"));
+			$id = substr(basename($f),0,strpos(basename($f),'_'));
 			if($id == "xx"){
 				echo $f." ignored\n";
 			} else {
